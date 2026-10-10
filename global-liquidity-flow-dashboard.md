@@ -78,9 +78,10 @@ Separate price moves caused mainly by supply shocks from broad liquidity-driven 
 Track:
 - S&P 500
 - Nasdaq
+- Dow Jones
 - Russell 2000
 - Major sector leadership
-- Specifically note Energy, Consumer Staples, Utilities and other defensive sectors when they outperform during risk-off periods
+- Specifically note Energy, Consumer Staples, Utilities, Technology, Financials, Healthcare and other relevant leaders/laggards
 - Credit spreads if reliable current data are available
 
 ### G. Volatility / stress
@@ -94,12 +95,68 @@ Interpret divergence:
 
 ## Required output format
 
-### 1. Liquidity Dashboard
-Create a compact table:
-| Indicator | Latest | Change | Direction | What it means | Data date/source |
+### 1. Global Market Dashboard
+**Always use this section as the main compact table. Keep this format consistent across every report.**
 
-### 2. Where is the money/liquidity going?
-Rank the destinations with confidence:
+Use columns:
+| Indicator | Latest verified value | Change / Signal | Liquidity meaning | Data date/source |
+
+Include, at minimum, rows for:
+- DXY
+- U.S. 2Y yield
+- U.S. 10Y yield
+- U.S. 30Y yield
+- MOVE
+- VIX
+- Fed total assets
+- Reserve balances
+- TGA
+- ON RRP
+- Money-market fund assets and latest weekly flow/change
+- BTC spot ETF net flow
+- ETH spot ETF net flow
+- Stablecoin total market cap
+- Stablecoin 1d change
+- Stablecoin 7d change
+- Gold
+- Brent
+- WTI
+- S&P 500
+- Nasdaq
+- Dow Jones
+- Russell 2000
+- Sector leadership / breadth
+
+Formatting rules:
+- Use 🟢 for liquidity/risk-on supportive signals, 🔴 for restrictive/risk-off signals, 🟡 for mixed/neutral signals, and ⚪ for unavailable/unverified data.
+- Keep each interpretation short and readable.
+- Do not hide stale dates: show the exact observation date for weekly Fed, ICI, ETF, or other non-real-time data.
+- If a value cannot be verified, mark it unverified rather than guessing.
+
+### 2. Fed Liquidity
+Summarize the latest compatible Fed balance-sheet observations and compare with the prior period when useful.
+Show:
+- Fed total assets
+- Reserve balances
+- TGA
+- ON RRP
+- Simplified Fed Net Liquidity Proxy when compatible dates are available
+
+Highlight whether reserve liquidity is improving or deteriorating.
+
+### 3. Crypto Liquidity
+Summarize:
+- BTC spot ETF flow
+- ETH spot ETF flow
+- Combined flow when useful
+- Stablecoin total supply
+- Stablecoin 1d / 7d changes
+- USDT / USDC changes if material
+
+Separate true measured flows from price changes.
+
+### 4. Where is the money/liquidity going?
+Rank destinations with confidence:
 - USD / cash / cash equivalents
 - Money-market funds / T-bills
 - Stablecoins
@@ -112,7 +169,7 @@ Rank the destinations with confidence:
 
 Use High / Medium / Low confidence and give evidence for each.
 
-### 3. Market regime diagnosis
+### 5. Market regime diagnosis
 Choose one or more:
 - Risk-on rotation
 - Risk-off rotation
@@ -121,16 +178,33 @@ Choose one or more:
 - Bond/fiscal stress
 - Deleveraging / liquidity destruction
 - Crypto-specific risk reduction
+- Early macro liquidity improvement
+- Crypto confirmation pending
 
-### 4. Crypto implication
-Explain what the current macro/liquidity setup means for crypto **without issuing a buy/sell instruction**. State which signals would indicate liquidity is returning, such as:
+### 6. Crypto liquidity return confirmation
+Explain what the current macro/liquidity setup means for crypto **without issuing a buy/sell instruction**.
+
+Treat the following as liquidity-return evidence:
 - DXY weakening
 - Treasury yields easing
 - MOVE falling
-- TGA declining or reserve balances improving
+- VIX contained or easing
+- TGA declining
+- Reserve balances improving
+- Fed net liquidity proxy improving
 - Stablecoin supply expanding
 - BTC/ETH ETF flows turning positive
 - Broader equity breadth improving
+
+When several of these improve together, explicitly state whether the regime is:
+- No liquidity return
+- Early liquidity improvement
+- Partial confirmation
+- Strong crypto liquidity confirmation
+
+## Notification rule
+Notify only if there is a meaningful change suggesting liquidity is returning to crypto/risk assets **or** if liquidity conditions deteriorate materially.
+If there is no meaningful change, do not issue an unnecessary alert.
 
 ## Accuracy rules
 - Use the latest live/current source available.
